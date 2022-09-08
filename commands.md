@@ -94,3 +94,25 @@ SELECT attribute
 FROM table_name
 WHERE attribute IN (check_1, ..., check_n);
 ```
+**Выборка данных с сортировкой**
+``` SQL
+SELECT attribute
+FROM table_name
+ORDER BY attribute_x;
+```
+ORDER BY:  
+- `ASC` - По возрастанию
+- `DESC` - По убыванию
+
+**Выборка данных LIKE**
+``` SQL
+SELECT attribute_x 
+FROM table_name
+WHERE attribute_x LIKE [condition];
+```
+``` SQL
+SELECT attribute FROM table_name 
+WHERE attribute NOT LIKE [condition];
+```
+Legend:  
+- [condition] : Some pattern ("% %", "_%", ..., "_")  

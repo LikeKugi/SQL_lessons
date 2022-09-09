@@ -17,4 +17,4 @@ ___
 ___
 ## **Порядок написания и выполнения SQL запроса на выборку на СЕРВЕРЕ:**
 
-![SQL workflow])( https://github.com/LikeKugi/SQL_lessons/blob/main/src_img/sql-order-operations.png "SQL-workflow")
+![SQL workflow]( https://github.com/LikeKugi/SQL_lessons/blob/main/src_img/sql-order-operations.png "SQL-workflow")

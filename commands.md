@@ -1,21 +1,3 @@
-## **Основные SQL команды**
-___
-
-- SELECT 'столбцы или * для выбора всех столбцов; обязательно'
-
-- FROM 'таблица; обязательно'
-
-- WHERE 'условие/фильтрация, например, city = 'Moscow'; необязательно'
-
-- GROUP BY 'столбец, по которому хотим сгруппировать данные; необязательно'
-
-- HAVING 'условие/фильтрация на уровне сгруппированных данных; необязательно'
-
-- ORDER BY 'столбец, по которому хотим отсортировать вывод; необязательно'
-
-- /* */ 'комментарии'
-
-___
 ## **Добавление кортежей**
 
 Добавление одного кортежа
@@ -36,6 +18,7 @@ ___
 ``` SQL
 SELECT * FROM table_name;
 ```
+___
 **Выборка атрибутов из таблицы**
 ``` SQL
 SELECT attribute_1, 
@@ -43,11 +26,13 @@ SELECT attribute_1,
     attribute_n 
 FROM table_name;
 ```
+___
 **Выборка атрибута с присвоением нового имени атрибуту в выборке**
 ``` SQL
 SELECT attribute AS new_attribute_name 
 FROM table_name;
 ```
+___
 **Выборка данных с созданием вычисляемого столбца**
 ``` SQL
 SELECT attribute_1, attribute_2, 
@@ -56,6 +41,7 @@ SELECT attribute_1, attribute_2,
      AS result_attribute_name 
 FROM table_name;
 ```
+___
 **Выборка данных с логическими функциями**
 ``` SQL
 SELECT attribute_1, attribute_2, 
@@ -68,6 +54,7 @@ Legend:
 - [if_1 = true] : attribute_y [function?]
 - [else_1 = false] : attribute_y [function?]
 ```
+___
 **Выборка данных по условию**
 ``` SQL
 SELECT attribure 
@@ -78,6 +65,7 @@ Legend:
 ```
 - [condition_1] : attribute_x [function?]
 ```
+___
 **Выборка данных из интервала, включающего границы**
 ``` SQL
 SELECT attribute 
@@ -88,12 +76,14 @@ Legend:
 ```
 - [condition_1] : attribute_x [function?]
 ```
+___
 **Выборка данных соответствующим значениям из списка**
 ``` SQL
 SELECT attribute 
 FROM table_name
 WHERE attribute IN (check_1, ..., check_n);
 ```
+___
 **Выборка данных с сортировкой**
 ``` SQL
 SELECT attribute
@@ -103,7 +93,7 @@ ORDER BY attribute_x;
 ORDER BY:  
 - `ASC` - По возрастанию
 - `DESC` - По убыванию
-
+___
 **Выборка данных LIKE**
 ``` SQL
 SELECT attribute_x 
@@ -116,3 +106,15 @@ WHERE attribute NOT LIKE [condition];
 ```
 Legend:  
 - [condition] : Some pattern ("% %", "_%", ..., "_")  
+___
+**Выборка уникальных данных**
+``` SQL
+SELECT DISTINCT attribute_x
+FROM table_name;
+```
+`DISTINCT` или с помощью `GROUP BY`
+``` SQL
+SELECT  attribute_x
+FROM table_name
+GROUP BY attrribute_x;
+```

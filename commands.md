@@ -88,7 +88,7 @@ ___
 ``` SQL
 SELECT attribute
 FROM table_name
-ORDER BY attribute_x;
+ORDER BY attribute_x DESC;
 ```
 ORDER BY:  
 - `ASC` - По возрастанию

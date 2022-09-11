@@ -1,18 +1,3 @@
-## **Добавление кортежей**
-
-Добавление одного кортежа
-``` SQL
-INSERT INTO table_name (field_1, ..., field_n)  
-    VALUE (value_1, ..., value_n);
-```
-Добавление нескольких кортежей
-``` SQL
-INSERT INTO table_name (field_1, ..., field_n)  
-    VALUES (row1_value_1, ..., row1_value_n),  
-     ...,   
-     (row_x_value_1, ..., row_x_value_n);  
-```
-___
 ## **Выборка данных**
 **Выборка всех данных из таблицы**
 ``` SQL

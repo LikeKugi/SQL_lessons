@@ -23,3 +23,11 @@ ___
 | `attrinute_x < ALL (10, 12)` | `attrinute_x` < 10 |
 | `attrinute_x = ALL (10, 12)` | не вернет ни одной записи, так как эквивалентно (`attrinute_x` = 10) AND (`attrinute_x` = 12) |
 | `attrinute_x <> ALL (10, 12)` | вернет все записи кроме тех,  в которых `attrinute_x` равно 10 или 12 |
+___
+**DATEDIFF samples**
+
+| command | meaning |
+|:----:|------|
+| `DATEDIFF` | разница между датами |
+| `DATEDIFF('2020-04-01', '2020-03-28')` | = 4 |
+| `DATEDIFF(date_last, date_first)` ||

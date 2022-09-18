@@ -67,8 +67,6 @@ SET table_1.attribute_1 = table_1.attribute_1 + table_2.attribute_1
 /* условие, при котором обновляются данные */
 WHERE book.attribute_x = table_2.attribute_x 
     AND book.attribute_y = table_2.attribute_y;
-
-SELECT * FROM book;
 ```
 ___
 ## **Запросы на удаление**  

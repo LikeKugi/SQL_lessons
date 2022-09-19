@@ -95,3 +95,27 @@ SELECT attribute_1, ..., attribute_n
 FROM table_old
 WHERE [condition];
 ```
+___
+## **Создание новой таблицы с внешним ключом**
+``` SQL
+CREATE TABLE table_name (
+    attribute_id INT PRIMARY KEY AUTO_INCREMENT,  /* первичный ключ */
+    attribute_x VARCHAR(50), 
+    foreign_id INT NOT NULL, 
+    attribute_y DECIMAL(8,2), 
+    attribute_ INT, 
+    /* объявление внешнего ключа */
+    /* может быть несколько внешних ключей. 
+    они объявляются так же через запятую */
+    FOREIGN KEY (foreign_id)  REFERENCES table_from (primary_id) /* !!!названия foreign_id = primary_id */ 
+);
+```
+___
+## **ON DELETE для внешнего ключа**
+``` SQL
+FOREIGN KEY (first_id)  REFERENCES table_ref_x (first_id) ON DELETE CASCADE,
+/* second_id не дожен быть NOT NULL */
+FOREIGN KEY (second_id)  REFERENCES table_ref_y (second_id) ON DELETE SET NULL,
+FOREIGN KEY (third_id)  REFERENCES table_ref_z (third_id) ON DELETE SET DEFAULT,
+FOREIGN KEY (fourth_id)  REFERENCES table_ref_xy (fourth_id) ON DELETE RESTRICT
+```

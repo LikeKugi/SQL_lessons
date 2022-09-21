@@ -9,6 +9,15 @@ FROM
     table_1 INNER JOIN  table_2
     ON [condition]; 
 ```
+
+также вместо `ON` можно использовать `USING` если атрибуты имеют одинаковое название
+``` SQL
+SELECT attribute_x, ..., attribute_y 
+/* имя таблицы, из которой берется attribute_join, указывать не обязательно*/
+FROM 
+    table_1 INNER JOIN table_2
+    USING(attribute_join);
+```
 ___
 
 ## **Соединение LEFT OUTER JOIN / RIGHT OUTER JOIN**  

@@ -87,6 +87,14 @@ WHERE attribute_x IN (
         FROM table_name_2
       );
 ```
+Удаление кортежей из связанных таблиц
+``` SQL
+DELETE FROM table_1
+USING 
+    table_1 t1
+    INNER JOIN table_2 t2 ON [t1.attribute = t2.attribute]
+WHERE [condition]
+```
 ___
 ## **Создание новой таблицы на основе старой**
 ``` SQL
